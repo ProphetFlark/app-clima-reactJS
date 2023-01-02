@@ -1,0 +1,207 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+p {
+  font-size: 1.6rem;
+}
+
+h1 {
+  font-size: 6rem;
+}
+
+.app {
+  background-repeat: no-repeat;
+  content: "";
+  position: static;
+  height: 100%;
+  width: 100%;
+  color: #fff;
+}
+
+.app .fondo .imagenfondo {
+  content: "";
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  z-index: -1;
+  filter: blur(2px);
+  -webkit-filter: blur(2px);
+  filter: brightness(0.25);
+}
+
+.app .search {
+  text-align: center;
+  padding: 2% 0 0 0;
+  width: 100%;
+  position: relative;
+}
+
+.app input {
+  width: 70%;
+  padding: 0.7rem 1.5rem;
+  font-size: 1.2 rem;
+  border-radius: 10px 10px 0 0;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.3);
+  color: snow;
+  backdrop-filter: blur(15px);
+}
+
+::placeholder {
+  color: snow;
+}
+.container {
+  width: 98vw;
+  height: 98%;
+  margin: 0;
+  padding: 5%;
+  position: relative;
+  top: 6%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.app .top {
+  width: 100%;
+  margin: 0;
+}
+
+.container .top .location p {
+  margin: 0;
+  font-size: 2.2rem;
+}
+
+.container .top .temp p {
+  font-size: 4rem;
+  font-weight: 2000;
+  font-style: bold;
+}
+
+.app .description {
+  position: relative;
+  right: -85%;
+  transform-origin: 0 0;
+  transform: rotate(270deg);
+}
+
+.app .description .des {
+  text-align: center;
+  font-size: 1.7rem;
+  position: relative;
+  height: 17%;
+  width: 17%;
+  margin: 0;
+  padding: 0;
+}
+
+.app .description .imagen {
+  position: relative;
+  margin: 0px 0px 0px 30px;
+  height: 10%;
+  width: 10%;
+  transform: rotate(-270deg);
+}
+
+.app .bottom {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  width: 100%;
+  margin: 0 0 1% 0%;
+  padding: 1rem;
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(9px);
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.top .description {
+  text-transform: capitalize;
+}
+
+.dropdown {
+  background-color: rgba(255, 255, 255, 0.3);
+  border: 1px solid gray;
+  width: 70%;
+  z-index: 100;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  backdrop-filter: blur(8px);
+}
+
+.dropdown:empty {
+  border: none;
+}
+
+.dropdown-row {
+  cursor: pointer;
+  margin: 0;
+  text-align: center;
+  padding: 1.5% 0 1.5% 0;
+  border-bottom: 1px solid gray;
+  width: 100%;
+  color: snow;
+}
+
+@media (max-width: 700px) {
+  .app .description {
+    right: -70%;
+  }
+  .container .top .location p {
+    padding: 50px 0 0 40px;
+    margin: 0;
+  }
+
+  .container .top .temp p {
+    padding: 0px 0 0 40px;
+    margin: 0;
+  }
+
+  .app .description .imagen {
+    height: 20%;
+    width: 20%;
+  }
+  .app .description .des {
+    height: 80%;
+    width: 80%;
+    margin: 0px 0px 0px -80px;
+  }
+  .app .bottom {
+    display: block;
+    padding: 1rem;
+    margin-bottom: 1.2rem;
+  }
+  .bold {
+    font-size: 2.5rem;
+  }
+  .app .bottom p {
+    margin-bottom: 0.2rem;
+  }
+
+  .app .bottom .separator {
+    margin: 1rem 0rem;
+    border-bottom: solid 1px;
+  }
+
+  .app .search {
+    padding-top: 5%;
+  }
+}
