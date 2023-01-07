@@ -19,6 +19,50 @@ h1 {
   font-size: 6rem;
 }
 
+.inicio {
+  background-repeat: no-repeat;
+  content: "";
+  position: static;
+  height: auto;
+  width: 100vw;
+  color: #fff;
+}
+
+.imageninicio {
+  content: "";
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  z-index: -1;
+  filter: blur(2px);
+  -webkit-filter: blur(2px);
+  filter: brightness(0.25);
+}
+
+.bienvenida {
+  width: 100vw;
+  height: 85vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.titulobien {
+  font-size: 1.5rem;
+  width: 80vw;
+  margin: auto;
+}
+.footerbien {
+  font-size: 1rem;
+  width: 80vw;
+  margin: auto;
+  color: rgba(255, 255, 255, 0.5);
+}
+
 .app {
   background-repeat: no-repeat;
   content: "";
@@ -165,13 +209,14 @@ h1 {
   .app .description {
     right: -70%;
   }
+
   .container .top .location p {
-    padding: 50px 0 0 40px;
-    margin: 0;
+    font-size: 1.7rem;
+    padding: 30px 0 0 0px;
   }
 
   .container .top .temp p {
-    padding: 0px 0 0 40px;
+    padding: 0px 0 0 0px;
     margin: 0;
   }
 
